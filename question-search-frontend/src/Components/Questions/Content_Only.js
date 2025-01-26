@@ -25,7 +25,7 @@ const Anagram = () => {
 
     const fetchingData = async (page = 1, searchQuery = '') => {
         try {
-            const response = await fetch(`http://localhost:5000/api/${selected}?page=${page}&limit=${questionsPerPage}&search=${searchQuery}`);
+            const response = await fetch(`https://question-search-backend.onrender.com/api/${selected}?page=${page}&limit=${questionsPerPage}&search=${searchQuery}`);
             const data = await response.json();
             setQuestions(data.data);
             setTotalPages(data.totalPages);

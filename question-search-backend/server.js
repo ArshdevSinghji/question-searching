@@ -7,7 +7,7 @@ const MCQ = require('./models/mcq');
 const ReadAlong = require('./models/read_along');
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 require('./config/database')();
 app.use(cors());
